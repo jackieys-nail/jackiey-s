@@ -8,6 +8,7 @@
   --font-heading: var(--font-serif);
   --font-serif: var(--font-serif), 'Cormorant Garamond Fallback', serif;
   --font-sans: var(--font-sans), 'Jost Fallback', sans-serif;
+  --font-script: var(--font-script), 'Ballet Fallback', cursive;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);

@@ -27,6 +27,9 @@ export function Hero() {
         </p>
 
         <h1 className="text-balance font-serif text-4xl font-medium leading-[1.08] tracking-tight text-foreground sm:text-6xl md:text-7xl">
+          <span className="sr-only">
+            Nail artist and lash extensions in Norfolk, VA &mdash;{' '}
+          </span>
           Your Nails. Your Lashes.
           <br />
           <span className="italic text-gold">Your Signature Look.</span>

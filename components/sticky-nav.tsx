@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
+import { BrandLogo } from './brand-logo'
 
 export function StickyNav() {
   const [visible, setVisible] = useState(false)
@@ -28,11 +29,8 @@ export function StickyNav() {
           : 'pointer-events-none -translate-y-full opacity-0',
       )}
     >
-      <a
-        href="#hero"
-        className="font-serif text-lg font-medium tracking-tight text-foreground sm:text-xl"
-      >
-        Jackiey&apos;s Beauty Corner
+      <a href="#hero" className="text-foreground" aria-label="Jackiey's Beauty Corner home">
+        <BrandLogo size="sm" />
       </a>
     </div>
   )

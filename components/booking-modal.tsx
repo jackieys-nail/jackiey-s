@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { BrandLogo } from './brand-logo'
 
 const SQUARE_WIDGET_SRC =
   'https://app.squareup.com/appointments/buyer/widget/36k3xt3b9m7yl6/LJHM1FKAX3EYT'
@@ -58,9 +59,7 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
       {/* Panel */}
       <div className="relative z-10 flex h-[88vh] w-full max-w-3xl flex-col overflow-hidden rounded-2xl bg-card shadow-2xl">
         <div className="flex items-center justify-between border-b border-border px-6 py-4">
-          <span className="font-serif text-xl font-medium tracking-tight text-foreground sm:text-2xl">
-            Jackiey&apos;s Beauty Corner
-          </span>
+          <BrandLogo size="sm" cornerClassName="text-foreground" />
           <button
             type="button"
             onClick={onClose}

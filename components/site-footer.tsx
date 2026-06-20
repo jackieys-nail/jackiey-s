@@ -1,13 +1,12 @@
+import { BrandLogo } from './brand-logo'
 import { InstagramIcon, PhoneIcon, PinIcon } from './icons'
 
 export function SiteFooter() {
   return (
     <footer className="bg-espresso px-4 py-16 text-cream sm:py-20">
       <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
-        <span className="font-serif text-4xl font-medium tracking-tight text-cream">
-          Jackiey&apos;s Beauty Corner
-        </span>
-        <p className="mt-2 font-sans text-xs uppercase tracking-[0.35em] text-gold">
+        <BrandLogo size="lg" cornerClassName="text-cream" />
+        <p className="mt-4 font-sans text-xs uppercase tracking-[0.35em] text-gold">
           Nail Artist & Lash Tech
         </p>
 
