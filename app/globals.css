@@ -1,0 +1,132 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-serif);
+  --font-serif: var(--font-serif), 'Cormorant Garamond Fallback', serif;
+  --font-sans: var(--font-sans), 'Jost Fallback', sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Brand tokens */
+  --color-cream: var(--cream);
+  --color-blush: var(--blush);
+  --color-sand: var(--sand);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-espresso: var(--espresso);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+:root {
+  color-scheme: light;
+
+  /* Nude & Gold luxury palette */
+  --cream: #fdfbf7;
+  --blush: #f6efea;
+  --sand: #f3e5d8;
+  --gold: #dfba73;
+  --gold-soft: #e5c17d;
+  --espresso: #1c1c1c;
+
+  --background: #fdfbf7;
+  --foreground: #2b2620;
+  --card: #ffffff;
+  --card-foreground: #2b2620;
+  --muted: #f6efea;
+  --muted-foreground: #8a7f72;
+  --accent: #dfba73;
+  --accent-foreground: #1c1c1c;
+  --border: #ece2d6;
+  --input: #ece2d6;
+  --ring: #dfba73;
+
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+  }
+}
+
+/* Animated mesh gradient for the hero */
+@keyframes meshShift {
+  0% {
+    background-position: 0% 50%, 100% 50%, 50% 0%;
+  }
+  50% {
+    background-position: 100% 50%, 0% 50%, 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%, 100% 50%, 50% 0%;
+  }
+}
+
+.mesh-gradient {
+  background-color: #fdfbf7;
+  background-image:
+    radial-gradient(at 18% 22%, #f3e5d8 0px, transparent 55%),
+    radial-gradient(at 82% 28%, #f6efea 0px, transparent 50%),
+    radial-gradient(at 50% 88%, #f0dcc6 0px, transparent 55%);
+  background-size: 200% 200%;
+  animation: meshShift 18s ease-in-out infinite;
+}
+
+/* Scroll indicator pulse */
+@keyframes softPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(4px);
+  }
+}
+
+.scroll-dot {
+  animation: softPulse 2s ease-in-out infinite;
+}
+
+/* Gold shimmer underline accent */
+.gold-rule {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold) 50%,
+    transparent
+  );
+}
